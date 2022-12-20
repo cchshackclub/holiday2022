@@ -1,0 +1,342 @@
+@font-face {
+    font-family: "Better Yesterday";
+    src: url("./fonts/BetterYesterday.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Better Yesterday";
+    font-style: italic;
+    src: url("./fonts/BetterYesterdayItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 200 900;
+    src: url("./fonts/Inter.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter Tight";
+    font-weight: 200 900;
+    src: url("./fonts/InterTight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url("./fonts/Staatliches.ttf") format("truetype");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #e9e8e8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    overflow: clip;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+@keyframes slide-up {
+    0% {
+        bottom: -100px;
+    }
+    20% {
+        bottom: 2px;
+    }
+    30% {
+        bottom: 5px;
+    }
+    40% {
+        bottom: 2px;
+    }
+    50% {
+        bottom: 2px;
+    }
+    60% {
+        bottom: 2px;
+    }
+    70% {
+        bottom: 2px;
+    }
+    80% {
+        bottom: 2px;
+    }
+    90% {
+        bottom: 2px;
+    }
+    100% {
+        bottom: -100px;
+    }
+}
+
+.toast {
+    -webkit-animation: slide-up 3s ease-in-out forwards;
+    animation: slide-up 3s ease-in-out forwards;
+    opacity: 0.9;
+    background-color: #fffaf4;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    font-family: "Inter Tight", sans-serif;
+    font-size: 0.995rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.1rem 1rem;
+}
+
+#toasts {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    width: 100%;
+}
+
+#options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.option-button {
+    background-color: white;
+    color: gray;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.option-button:hover {
+    color: black;
+}
+
+#card {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    width: 90vw;
+    height: 90vh;
+    max-width: 90vw;
+    max-height: 90vh;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+#card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    -o-transition: transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#front,
+#back {
+    background-color: #fffaf4;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#happy-holidays {
+    color: #fffaf4;
+    font-family: "Staatliches", sans-serif;
+    font-size: 4rem;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    text-transform: uppercase;
+}
+
+#happy-holidays h1,
+#happy-holidays h3 {
+    line-height: 0.8;
+    margin: 0;
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        bottom: -100px;
+    }
+    20% {
+        bottom: 2px;
+    }
+    30% {
+        bottom: 5px;
+    }
+    40% {
+        bottom: 2px;
+    }
+    50% {
+        bottom: 2px;
+    }
+    60% {
+        bottom: 2px;
+    }
+    70% {
+        bottom: 2px;
+    }
+    80% {
+        bottom: 2px;
+    }
+    90% {
+        bottom: 2px;
+    }
+    100% {
+        bottom: -100px;
+    }
+}
+
+#back {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#back > div {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    overflow: auto;
+}
+
+#message .prose {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.5rem;
+    padding: 0rem 3rem 1rem 3rem;
+}
+
+#info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: "Better Yesterday", cursive;
+    font-size: 3rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 1px solid;
+}
+
+#info h1 {
+    border-bottom: 1px solid;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+#signatures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+#signatures p {
+    line-height: 0;
+    margin-bottom: 0;
+}
+
+.prefix {
+    color: gray;
+    font-family: "Staatliches", sans-serif;
+    font-size: 1.5rem;
+}
+
+#sign {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 7px 7px 7px 14px;
+    border-radius: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    letter-spacing: -1px;
+}
+
+#sign input {
+    background-color: transparent;
+    border: none;
+    color: black;
+    letter-spacing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+}
+
+#sign button {
+    background-color: #67c6b6;
+    border: none;
+    border-radius: 20px;
+    color: #fffaf4;
+    letter-spacing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 7px 35px;
+    cursor: pointer;
+}

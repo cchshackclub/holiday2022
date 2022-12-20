@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_blank" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Happy Holidays 2022! | CCHS Hack Club</title>
+        <link href="./index.css" rel="stylesheet" />
+        <script src="./tsparticles.min.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <div id="toasts"></div>
+        <div id="options">
+            <button class="option-button" id="share-button" title="Share card">
+                <svg
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="1.414"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="share"
+                    viewBox="0 0 32 32"
+                    preserveAspectRatio="xMidYMid meet"
+                    fill="currentColor"
+                    width="32"
+                    height="32"
+                    title="share">
+                    <g fill-rule="nonzero">
+                        <path
+                            d="M16.707,5.294c-0.39,-0.39 -1.024,-0.39 -1.414,0l-3,3c-0.391,0.391 -0.391,1.024 0,1.415c0.39,0.39 1.024,0.39 1.414,0l1.293,-1.293l0,9.585c0,0.553 0.448,1 1,1c0.552,0 1,-0.447 1,-1l0,-9.585l1.293,1.293c0.39,0.39 1.024,0.39 1.414,0c0.391,-0.391 0.391,-1.024 0,-1.415l-3,-3Zm-5.817,7.023c0.588,-0.114 1.11,0.36 1.11,0.959l0,0.426c0,0.265 -0.198,0.487 -0.459,0.531l-0.002,0c-1.042,0.17 -1.486,0.416 -1.706,0.612c-0.191,0.171 -0.42,0.489 -0.588,1.31l-0.007,0.03c-0.191,0.926 -0.238,2.106 -0.238,3.815l0,0.003c0,1.709 0.047,2.889 0.238,3.814l0.007,0.031c0.168,0.821 0.397,1.139 0.588,1.309c0.219,0.197 0.662,0.442 1.699,0.612l0.017,0.002c1.094,0.182 2.493,0.231 4.45,0.23l0.002,0c1.957,0.001 3.356,-0.048 4.45,-0.23l0.017,-0.002c1.037,-0.17 1.48,-0.415 1.699,-0.611c0.191,-0.171 0.42,-0.489 0.588,-1.31l0.007,-0.031c0.191,-0.925 0.238,-2.105 0.238,-3.814l0,-0.003c0,-1.709 -0.047,-2.889 -0.238,-3.815l-0.007,-0.03c-0.168,-0.821 -0.397,-1.139 -0.588,-1.31c-0.22,-0.196 -0.664,-0.442 -1.706,-0.612l-0.002,0c-0.262,-0.044 -0.459,-0.266 -0.459,-0.531l0,-0.426c0,-0.599 0.522,-1.073 1.11,-0.959c3.362,0.655 3.89,2.553 3.89,7.684c0,7.059 -1,8 -9,8c-8,0 -9,-0.941 -9,-8c0,-5.131 0.528,-7.029 3.89,-7.684Z"></path>
+                    </g>
+                </svg>
+            </button>
+            <button class="option-button" id="flip-button" title="Flip card">
+                <svg
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="1.414"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="reply"
+                    viewBox="0 0 32 32"
+                    preserveAspectRatio="xMidYMid meet"
+                    fill="currentColor"
+                    width="32"
+                    height="32"
+                    title="reply">
+                    <path
+                        d="M 5.8902 8.70774C 6.31445 9.0613 6.3718 9.69185 6.01822 10.1161C 5.66464 10.5404 5.03409 10.5977 4.6098 10.2442L 4.60855 10.2431C 3 9.22597 2 8.22597 0.40863 6.27944C 0.19043 5.96819 0 5.61611 0 5.22594C 0 4.83579 0.19043 4.48371 0.40863 4.17246C 2 2.22597 3 1.22597 4.60944 0.20804C 5.0762 -0.0871717 5.66464 -0.0885144 6.01822 0.335756C 6.3718 0.760027 6.31445 1.3906 5.8902 1.74416L 5.72845 1.87903C 4.58041 2.83635 3.8909 3.41132 3.07352 4.22597L 16 4.22597C 18.7614 4.22597 21 6.46454 21 9.22597C 21 11.9874 18.7614 14.226 16 14.226L 12 14.226C 11.4477 14.226 11 13.7783 11 13.226C 11 12.6737 11.4477 12.226 12 12.226L 16 12.226C 17.6569 12.226 19 10.8828 19 9.22597C 19 7.56911 17.6569 6.22597 16 6.22597L 3.07495 6.22597C 3.87918 7.02567 4.56436 7.59874 5.64545 8.50295L 5.8902 8.70774Z"
+                        transform="translate(6 9)"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="card">
+            <div id="card-inner">
+                <div id="front">
+                    <div id="front-content">
+                        <div id="happy-holidays">
+                            <h1>Happy Holidays!</h1>
+                            <h3>2022</h3>
+                        </div>
+                        <div id="tsparticles"></div>
+                    </div>
+                </div>
+                <div id="back">
+                    <div id="message">
+                        <a href="https://cchs.hackclub.com" target="_blank">
+                            <img
+                                style="width: 200px"
+                                src="https://assets.hackclub.com/flag-orpheus-top.svg" />
+                        </a>
+                        <div class="prose">
+                            <p>
+                                As the end of the year approaches, we wanted to
+                                take a moment to send you warm wishes for the
+                                holidays. No matter what holiday you celebrate,
+                                we hope that this time is filled with joy, love,
+                                and lots of good cheer. We're grateful to have
+                                you in our lives and we hope that you have a
+                                wonderful holiday season.
+                            </p>
+                            <p>
+                                The holiday season is a time for reflection and
+                                celebration, and we're grateful to have you in
+                                our lives. We hope that this time is filled with
+                                joy, love, and good cheer for you and your loved
+                                ones. As we look ahead to the new year, we're
+                                excited for all that it has in store and we hope
+                                that it brings happiness and prosperity to you
+                                and your loved ones. Wishing you a Happy
+                                Holidays!
+                            </p>
+                            <p>
+                                Fun fact: this was created by
+                                <a href="https://cchs.hackclub.com"
+                                    >CCHS Hack Club</a
+                                >. Source code can be found
+                                <a
+                                    href="https://github.com/cchshackclub/holiday2022"
+                                    >here</a
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="info">
+                        <div id="signatures"></div>
+                        <div id="to">
+                            <h1>
+                                <span class="prefix" style="font-size: 1.5rem"
+                                    >TO:</span
+                                >
+                                You!
+                            </h1>
+                            <hr />
+                            <hr />
+                            <hr />
+                            <form id="sign">
+                                <input
+                                    autocomplete="off"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Sign this card!"
+                                    required />
+                                <button type="submit">Sign!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

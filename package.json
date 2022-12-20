@@ -1,0 +1,19 @@
+{
+  "name": "holiday2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "format": "prettier --ignore-path ./.prettierignore . --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
