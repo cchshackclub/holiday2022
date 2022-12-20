@@ -29,6 +29,10 @@ window.onload = () => {
     // Generate signatures
     getSignatures();
 
+    alert(
+        "Flip to the back using the button in the bottom right corner to sign!"
+    );
+
     tsParticles.load("tsparticles", {
         preset: "fireworks"
     });
