@@ -100,9 +100,9 @@ html {
 
 #toasts {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: 999;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
     width: 100%;
 }
 
@@ -118,6 +118,7 @@ html {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 9998;
 }
 
 .option-button {
@@ -187,7 +188,7 @@ html {
 #happy-holidays {
     color: #fffaf4;
     font-family: "Staatliches", sans-serif;
-    font-size: 4rem;
+    font-size: 2.75rem;
     padding: 2rem;
     position: absolute;
     top: 0;
@@ -236,10 +237,8 @@ html {
 }
 
 #back {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-transform: rotateY(180deg);
+    overflow: auto;
     transform: rotateY(180deg);
 }
 
@@ -268,9 +267,7 @@ html {
     justify-content: space-between;
     font-family: "Better Yesterday", cursive;
     font-size: 3rem;
-    margin: 2rem 0;
     padding: 2rem;
-    border-left: 1px solid;
 }
 
 #info h1 {
@@ -313,7 +310,6 @@ html {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
     letter-spacing: -1px;
 }
 
@@ -326,6 +322,7 @@ html {
     font-size: inherit;
     font-weight: inherit;
     outline: none;
+    width: 100%;
 }
 
 #sign button {
@@ -339,4 +336,42 @@ html {
     font-weight: inherit;
     padding: 7px 35px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 575.98px) {
+    #happy-holidays {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    #message .prose {
+        padding-bottom: 0;
+    }
+
+    #info {
+        padding-inline: 3rem;
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    #toasts {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #happy-holidays {
+        font-size: 4rem;
+    }
+
+    #back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    #info {
+        border-left: 1px solid;
+        margin: 2rem 0;
+    }
 }
